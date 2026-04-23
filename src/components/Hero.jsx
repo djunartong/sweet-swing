@@ -8,22 +8,22 @@ import { useState, useEffect } from "react";
 
 const slides = [
   {
-    src: "/docs/images/hero/single.JPG",
+    src: "/images/hero/single.JPG",
     alt: "One-on-one coaching",
     label: "1-on-1 Coaching",
   },
   {
-    src: "/docs/images/hero/group.jpg",
+    src: "/images/hero/group.jpg",
     alt: "Group session",
     label: "Group Sessions",
   },
   {
-    src: "/docs/images/hero/kids-class.jpg",
+    src: "/images/hero/kids-class.jpg",
     alt: "Kid's class",
     label: "Kids Classes",
   },
   {
-    src: "/docs/images/hero/private-event.jpeg",
+    src: "/images/hero/private-event.jpeg",
     alt: "Private event and collaborations",
     label: "Private Events and Collaborations",
   },
