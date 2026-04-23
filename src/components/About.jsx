@@ -6,7 +6,7 @@ const coaches = [
     id: 1,
     personalInfo: {
       name: "Hanna Levina",
-      image: "/images/about/hanna.jpg",
+      image: import.meta.env.BASE_URL + "/images/about/hanna.jpg",
       description:
         "Former junior national champion with 10+ years of experience in the game. She is motivated to help players at every level discover their spark and grow on the court",
       credentials: [

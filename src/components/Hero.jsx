@@ -8,22 +8,22 @@ import { useState, useEffect } from "react";
 
 const slides = [
   {
-    src: "/images/hero/single.JPG",
+    src: import.meta.env.BASE_URL + "/images/hero/single.JPG",
     alt: "One-on-one coaching",
     label: "1-on-1 Coaching",
   },
   {
-    src: "/images/hero/group.jpg",
+    src: import.meta.env.BASE_URL + "/images/hero/group.jpg",
     alt: "Group session",
     label: "Group Sessions",
   },
   {
-    src: "/images/hero/kids-class.jpg",
+    src: import.meta.env.BASE_URL + "/images/hero/kids-class.jpg",
     alt: "Kid's class",
     label: "Kids Classes",
   },
   {
-    src: "/images/hero/private-event.jpeg",
+    src: import.meta.env.BASE_URL + "/images/hero/private-event.jpeg",
     alt: "Private event and collaborations",
     label: "Private Events and Collaborations",
   },
