@@ -2,28 +2,28 @@ import { useState, useEffect } from "react";
 
 // ─── CAROUSEL DATA ────────────────────────────────────────────────────────────
 // To replace sample images with your own photos, update the src values here.
-// Option A — local file: place the image in public/images/ and use "/images/photo.jpg"
+// Option A — local file: place the image in docs/images/ and use "/images/photo.jpg"
 // Option B — keep using Unsplash URLs (free, no attribution required for dev)
 // w= and h= control dimensions; fit=crop fills the frame exactly.
 
 const slides = [
   {
-    src: "/public/images/hero/single.JPG",
+    src: "/docs/images/hero/single.JPG",
     alt: "One-on-one coaching",
     label: "1-on-1 Coaching",
   },
   {
-    src: "/public/images/hero/group.jpg",
+    src: "/docs/images/hero/group.jpg",
     alt: "Group session",
     label: "Group Sessions",
   },
   {
-    src: "/public/images/hero/kids-class.jpg",
+    src: "/docs/images/hero/kids-class.jpg",
     alt: "Kid's class",
     label: "Kids Classes",
   },
   {
-    src: "/public/images/hero/private-event.jpeg",
+    src: "/docs/images/hero/private-event.jpeg",
     alt: "Private event and collaborations",
     label: "Private Events and Collaborations",
   },
