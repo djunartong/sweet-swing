@@ -827,6 +827,10 @@ section {
   transition: border-color 0.2s;
   outline: none;
 }
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: rgba(255, 255, 255, 0.363);
+}
 /* Yellow-green focus ring reinforces the brand accent on interaction */
 .form-group input:focus,
 .form-group textarea:focus,

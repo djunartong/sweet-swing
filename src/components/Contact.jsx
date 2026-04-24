@@ -23,7 +23,7 @@ const WHATSAPP_MESSAGE = encodeURIComponent(
 const contactDetails = [
   { icon: "📍", label: "Location", val: import.meta.env.VITE_LOCATION },
   { icon: "📞", label: "Phone", val: import.meta.env.VITE_PHONE },
-  { icon: "📧", label: "Email", val: import.meta.env.VITE_EMAIL },
+  // { icon: "📧", label: "Email", val: import.meta.env.VITE_EMAIL },
   { icon: "🕐", label: "Hours", val: "Mon–Fri: 7am–8pm\nSat–Sun: 8am–6pm" },
 ];
 
@@ -130,7 +130,7 @@ export default function Contact() {
               <label>Email Address</label>
               <input
                 type="email"
-                placeholder="alex@email.com"
+                placeholder="alex@gmail.com"
                 value={formData.email}
                 onChange={(e) =>
                   setFormData({ ...formData, email: e.target.value })
@@ -140,7 +140,7 @@ export default function Contact() {
             <div className="form-group">
               <label>Phone (optional)</label>
               <input
-                placeholder="+1 (555) 000-0000"
+                placeholder="+62 (291) 0000-0000"
                 value={formData.phone}
                 onChange={(e) =>
                   setFormData({ ...formData, phone: e.target.value })
@@ -156,10 +156,11 @@ export default function Contact() {
                 }
               >
                 <option value="">Select a program...</option>
-                <option>Foundations (Beginner)</option>
-                <option>Game Builder (Intermediate)</option>
-                <option>Elite Program (Advanced)</option>
-                <option>Not sure yet</option>
+                <option>Private Class</option>
+                <option>Group Session</option>
+                <option>Kids Class</option>
+                <option>Private Event</option>
+                <option>Brand Collaboration</option>
               </select>
             </div>
             <div className="form-group">
