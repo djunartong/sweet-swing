@@ -120,6 +120,39 @@ a {
   background: var(--charcoal);
   transform: translateY(-1px);
 }
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  z-index: 200;
+}
+/* The three lines of the hamburger */
+.hamburger span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--dark-green);
+  border-radius: 2px;
+  transition: all 0.3s ease;
+  transform-origin: center;
+}
+/* Animate top line into an X when open */
+.hamburger.open span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+/* Hide middle line when open */
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+/* Animate bottom line into an X when open */
+.hamburger.open span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
 
 /* ─── HERO ───────────────────────────────────────────────────────────────────
    Pink gradient hero matches the brand's poster background colour.
@@ -218,7 +251,7 @@ a {
   /* fixed width so the carousel doesn't shrink as hero-content grows */
   flex-shrink: 0;
   width: 450px;
-  height: 550px;
+  aspect-ratio: 4/5;
   position: relative;
   border-radius: 20px;
   overflow: hidden;
@@ -577,19 +610,16 @@ section {
   overflow: hidden;
   max-width: 1100px;
   margin: 0 auto;
-  min-height: 700px;
+  transition: height 0.5s ease;
 }
 
 /* slide system */
 .slide {
   position: absolute;
   inset: 0;
-
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
   gap: 5rem;
   align-items: center;
-
   opacity: 0;
   transform: translateX(40px);
   transition: all 0.6s ease;
@@ -602,6 +632,7 @@ section {
   transform: translateX(0);
   pointer-events: auto;
   z-index: 2;
+  position: relative;
 }
 
 /* image */
@@ -964,13 +995,50 @@ footer {
 /* ─── RESPONSIVE ─────────────────────────────────────────────────────────────*/
 
 @media (max-width: 768px) {
+  /* Show hamburger on mobile */
+  .hamburger {
+    display: flex;
+  }
+  /* Mobile menu — hidden above the screen by default */
+  .nav-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    position: fixed;
+    top: 68px; /* same as navbar height */
+    left: 0;
+    right: 0;
+    background: rgba(242, 196, 208, 0.98);
+    padding: 2rem 0;
+    /* slide up out of view when closed */
+    transform: translateY(-110%);
+    transition: transform 0.35s ease;
+    z-index: 99;
+    visibility: hidden;
+  }
+  /* Slide down into view when open */
+  .nav-links.open {
+    transform: translateY(0);
+    visibility: visible;
+  }
   .about-inner,
   .contact-inner {
     grid-template-columns: 1fr;
     gap: 2rem;
   }
-  .nav-links {
-    display: none;
+  .slide {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .about-img {
+    max-width: 300px;
+  }
+  .hero {
+    min-height: 100vh;
+    height: auto;
+    align-items: flex-start;
+    padding: 120px 5% 60px;
   }
   .hero-stats {
     gap: 1.5rem;
@@ -978,17 +1046,22 @@ footer {
   /* Stack hero columns vertically on mobile — content on top, carousel below */
   .hero-inner {
     flex-direction: column;
+    align-items: stretch;
     gap: 2.5rem;
+  }
+  .hero-content {
+    max-width: 100%;
   }
   /* Carousel fills full width on mobile with reduced height */
   .carousel {
     width: 100%;
-    height: 300px;
+    aspect-ratio: 4/5;
     box-shadow:
       0 12px 30px rgba(75, 94, 28, 0.2),
       6px 6px 0 var(--yellow-green);
   }
   footer {
+    height: auto;
     flex-direction: column;
     align-items: center;
     text-align: center;
