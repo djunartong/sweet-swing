@@ -114,7 +114,7 @@ export default function About() {
                     rel="noopener noreferrer"
                   >
                     <FaInstagram />
-                    &nbsp;Connect on Instagram
+                    Connect on Instagram
                   </a>
                 )}
               </div>

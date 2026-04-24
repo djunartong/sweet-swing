@@ -667,7 +667,11 @@ section {
   background: var(--yellow-green);
   opacity: 1;
 }
-
+.instagram-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
 /* ─── TESTIMONIALS ───────────────────────────────────────────────────────────
    Pink section background mirrors the hero — creates a satisfying visual
    rhythm of pink → white → cream → pink → green down the page.
