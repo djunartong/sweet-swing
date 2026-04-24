@@ -10,6 +10,8 @@ const socials = [
   { icon: FaYoutube, link: "https://youtube.com", label: "YouTube" },
 ];
 
+const CURRENT_YEAR = new Date().getFullYear();
+
 export default function Footer() {
   return (
     <footer>
@@ -18,14 +20,14 @@ export default function Footer() {
       </div>
 
       <div className="footer-copy">
-        © 2026 Sweet Swing. All rights reserved.
+        © {CURRENT_YEAR} Sweet Swing. All rights reserved.
       </div>
 
       <div className="footer-socials">
         {socials.map((item) => {
           const Icon = item.icon;
 
-          return ( 
+          return (
             <a
               key={item.label}
               href={item.link}
