@@ -14,17 +14,27 @@ import { useState } from "react";
 
 const WHATSAPP_NUMBER = import.meta.env.VITE_WHATSAPP_NUMBER;
 const TELEGRAM_USERNAME = import.meta.env.VITE_TELEGRAM_USERNAME;
-const WHATSAPP_MESSAGE = encodeURIComponent(
-  "Hi! I'd like to book a tennis session.",
-);
+const WHATSAPP_MESSAGE = encodeURIComponent("Saya ingin memulai latihan 😊");
+
+// Replaces the static WHATSAPP_MESSAGE for the form submission.
+// encodeURIComponent converts spaces and special characters into URL-safe format.
+const buildWhatsAppMessage = (formData) =>
+  encodeURIComponent(
+    [
+      "🎾 Permintaan Informasi — Sweet Swing Tennis",
+      "",
+      `👤 Nama Lengkap: ${formData.name}`,
+      `📧 Email: ${formData.email}`,
+      `📞 Nomor Handphone: ${formData.phone || "Tidak tercantum"}`,
+      `🏓 Program: ${formData.program || "Belum dipilih"}`,
+      `💬 Pesan: ${formData.message || "Tidak ada pesan"}`,
+    ].join("\n"),
+  );
 
 // Contact detail values also come from .env so you can update them in one place
 // without touching any component code.
 const contactDetails = [
-  { icon: "📍", label: "Location", val: import.meta.env.VITE_LOCATION },
-  { icon: "📞", label: "Phone", val: import.meta.env.VITE_PHONE },
-  // { icon: "📧", label: "Email", val: import.meta.env.VITE_EMAIL },
-  { icon: "🕐", label: "Hours", val: "Mon–Fri: 7am–8pm\nSat–Sun: 8am–6pm" },
+  { icon: "📍", label: "Lokasi", val: "Jakarta & Kudus" },
 ];
 
 function WhatsAppIcon() {
@@ -70,19 +80,32 @@ export default function Contact() {
   });
   const [submitted, setSubmitted] = useState(false);
 
-  // Basic validation: only submit if name and email are filled in.
-  // In a real app you would also send this data to a backend or email service here.
+  // Opens WhatsApp with a pre-filled message containing all form details.
+  // window.open launches it in a new tab so the user stays on the page.
+  // We validate name and email before opening.
   const handleSubmit = () => {
-    if (formData.name && formData.email) setSubmitted(true);
+    if (!formData.name || !formData.email) {
+      alert("Please fill in your name and email before sending.");
+      return;
+    }
+
+    const message = buildWhatsAppMessage(formData);
+    window.open(
+      `https://wa.me/${WHATSAPP_NUMBER}?text=${message}`,
+      "_blank",
+      "noopener,noreferrer",
+    );
+
+    setSubmitted(true);
   };
 
   return (
     <section className="contact" id="contact">
-      <div className="section-label">Get In Touch</div>
-      <h2 className="section-title">Start Your Training</h2>
+      <div className="section-label">Hubungi Kami</div>
+      <h2 className="section-title">Come Swing With Us </h2>
       <p className="section-sub">
-        Book a free trial session or ask us anything. We'll get back to you
-        within 24 hours.
+        Silahkan tinggalkan pesan atau pertanyaan anda. Kami akan merespon dalam
+        24 jam 😊
       </p>
 
       <div className="contact-inner">
@@ -106,10 +129,11 @@ export default function Contact() {
                 letterSpacing: 1,
               }}
             >
-              Message Sent!
+              Pesan Terkirim!
             </div>
             <p style={{ color: "rgba(255,255,255,0.65)", marginTop: "0.5rem" }}>
-              We'll be in touch within 24 hours.
+              Terima kasih sudah menghubungi kami. Kami akan merespon dalam 24
+              jam.
             </p>
           </div>
         ) : (
@@ -117,9 +141,8 @@ export default function Contact() {
             {/* Each onChange spreads the existing formData and updates only the changed field.
                 This pattern avoids creating a separate handler for every input. */}
             <div className="form-group">
-              <label>Full Name</label>
+              <label>Nama Lengkap</label>
               <input
-                placeholder="e.g. Alex Johnson"
                 value={formData.name}
                 onChange={(e) =>
                   setFormData({ ...formData, name: e.target.value })
@@ -127,10 +150,9 @@ export default function Contact() {
               />
             </div>
             <div className="form-group">
-              <label>Email Address</label>
+              <label>Alamat Email</label>
               <input
                 type="email"
-                placeholder="alex@gmail.com"
                 value={formData.email}
                 onChange={(e) =>
                   setFormData({ ...formData, email: e.target.value })
@@ -138,9 +160,8 @@ export default function Contact() {
               />
             </div>
             <div className="form-group">
-              <label>Phone (optional)</label>
+              <label>Nomor Whatsapp</label>
               <input
-                placeholder="+62 (291) 0000-0000"
                 value={formData.phone}
                 onChange={(e) =>
                   setFormData({ ...formData, phone: e.target.value })
@@ -148,14 +169,14 @@ export default function Contact() {
               />
             </div>
             <div className="form-group">
-              <label>Interested In</label>
+              <label>Tertarik Dengan</label>
               <select
                 value={formData.program}
                 onChange={(e) =>
                   setFormData({ ...formData, program: e.target.value })
                 }
               >
-                <option value="">Select a program...</option>
+                <option value="">Pilih program...</option>
                 <option>Private Class</option>
                 <option>Group Session</option>
                 <option>Kids Class</option>
@@ -164,9 +185,9 @@ export default function Contact() {
               </select>
             </div>
             <div className="form-group">
-              <label>Message</label>
+              <label>Pesan</label>
               <textarea
-                placeholder="Tell us about your experience and goals..."
+                placeholder="Ceritakan tentang pengalaman dan tujuan anda..."
                 value={formData.message}
                 onChange={(e) =>
                   setFormData({ ...formData, message: e.target.value })
@@ -178,7 +199,7 @@ export default function Contact() {
               style={{ width: "100%", padding: "1rem", fontSize: "1rem" }}
               onClick={handleSubmit}
             >
-              Send Message →
+              Kirim Pesan →
             </button>
           </div>
         )}
@@ -211,7 +232,7 @@ export default function Contact() {
               you use target="_blank" — it prevents the new tab from being
               able to access or manipulate the original page. */}
           <div className="chat-links">
-            <div className="chat-links-label">Chat with us directly</div>
+            <div className="chat-links-label">Hubungi Kami Langsung</div>
             <div className="chat-btns">
               <a
                 href={`https://wa.me/${WHATSAPP_NUMBER}?text=${WHATSAPP_MESSAGE}`}
