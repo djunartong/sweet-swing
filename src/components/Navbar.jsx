@@ -30,16 +30,16 @@ export default function Navbar() {
           which CSS uses to slide the menu into view on mobile */}
       <ul className={`nav-links ${menuOpen ? "open" : ""}`}>
         <li>
-          <a onClick={() => scrollTo("programs")}>Programs</a>
+          <a onClick={() => scrollTo("programs")}>Program</a>
         </li>
         <li>
-          <a onClick={() => scrollTo("about")}>About</a>
+          <a onClick={() => scrollTo("about")}>Tentang Kami</a>
         </li>
         <li>
-          <a onClick={() => scrollTo("testimonials")}>Results</a>
+          <a onClick={() => scrollTo("testimonials")}>Review</a>
         </li>
         <li>
-          <a onClick={() => scrollTo("contact")}>Contact</a>
+          <a onClick={() => scrollTo("contact")}>Kontak Kami</a>
         </li>
       </ul>
     </nav>

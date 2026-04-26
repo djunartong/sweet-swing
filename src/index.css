@@ -582,17 +582,6 @@ section {
 .program-card.featured .program-desc {
   color: rgba(75, 94, 28, 0.85);
 }
-.program-price {
-  font-family: "Bebas Neue", sans-serif;
-  font-size: 1.8rem;
-  color: var(--dark-green);
-  letter-spacing: 1px;
-}
-.program-price span {
-  font-family: "Nunito", sans-serif;
-  font-size: 0.85rem;
-  font-weight: 600;
-}
 
 /* ─── ABOUT ──────────────────────────────────────────────────────────────────
    Cream background alternates from the white programs section.

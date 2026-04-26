@@ -8,11 +8,10 @@ const coaches = [
       name: "Hanna Levina",
       image: import.meta.env.BASE_URL + "/images/about/hanna.jpg",
       description:
-        "Former junior national champion with 10+ years of experience in the game. She is motivated to help players at every level discover their spark and grow on the court",
+        "Former junior national champion with 15+ years of experience in the game. She is motivated to help players at every level discover their spark and grow on the court",
       credentials: [
         "Indonesian National Champion (U10-U18)",
-        "Former WTA-ranked player",
-        "Certified STA Professional Coach",
+        "Former WTA & ITF-ranked player",
       ],
       instagram: "hannlevv",
     },

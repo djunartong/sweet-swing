@@ -1,10 +1,10 @@
 const testimonials = [
   {
-    initials: "SL",
-    name: "Sarah L.",
-    role: "Beginner Student",
+    initials: "M",
+    name: "Martin",
+    role: "Private Class Student",
     stars: 5,
-    text: "I had zero experience before joining. Within 3 months I could hold a proper rally and won my first social match. Coach James makes everything feel achievable.",
+    text: "Sweet Swing beneran jadi bekal buat perjalanan tennis ku sih.. jadi fondasi awal karena di Sweet Swing tuh diajarin semuanya mulai dari pemanasan yang benar, footwork yang benar, teknik mukul yang benar, teknik recovery yang benar. Semuanya thx to coach yang luar biasa detail bgt waktu ngelatih. Dan hebatnya lagi sesi-sesi nya itu bisa di bungkus dengan cara yang menarik dan ga ngebosenin.. Thank you Sweet Swing!!",
   },
   {
     initials: "MK",
@@ -25,11 +25,10 @@ const testimonials = [
 export default function Testimonials() {
   return (
     <section className="testimonials" id="testimonials">
-      <div className="section-label">Student Results</div>
-      <h2 className="section-title">What Players Say</h2>
+      <div className="section-label">Review</div>
+      <h2 className="section-title">Apa Kata Mereka</h2>
       <p className="section-sub">
-        Real feedback from real students. See what consistent, expert coaching
-        can do for your game.
+        Pengalaman nyata dari murid kami. Yuk buktiin juga sendiri!
       </p>
       <div className="testi-grid">
         {testimonials.map((t) => (

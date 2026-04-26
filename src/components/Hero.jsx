@@ -108,9 +108,9 @@ export default function Hero() {
             Stress <span className="accent">Less</span>
           </h1>
           <p>
-            Whether you're picking up a racket for the first time or looking to
-            sharpen your game, come swing with us! <br /> Good vibes, great
-            coaching — all skill levels welcome 😊
+            Mau mencoba tenis untuk pertama kalinya, atau udah main dan pengen
+            makin jago? Come swing with us! <br /> Good vibes, great coaching —
+            all skill levels welcome 😊
           </p>
           <div className="hero-btns">
             <button
@@ -121,7 +121,7 @@ export default function Hero() {
                   ?.scrollIntoView({ behavior: "smooth" })
               }
             >
-              Book A Session →
+              Yuk Mulai Latihan! →
             </button>
             <button
               className="btn-outline"
@@ -131,12 +131,12 @@ export default function Hero() {
                   ?.scrollIntoView({ behavior: "smooth" })
               }
             >
-              View Programs
+              Lihat Program
             </button>
           </div>
           <div className="hero-stats">
             <div>
-              <div className="stat-num">10+</div>
+              <div className="stat-num">15+</div>
               <div className="stat-label">Years Experience</div>
             </div>
             <div>
