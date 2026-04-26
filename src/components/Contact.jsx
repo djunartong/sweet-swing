@@ -21,13 +21,13 @@ const WHATSAPP_MESSAGE = encodeURIComponent("Saya ingin memulai latihan 😊");
 const buildWhatsAppMessage = (formData) =>
   encodeURIComponent(
     [
-      "🎾 Permintaan Informasi — Sweet Swing Tennis",
+      "Permintaan Informasi — Sweet Swing Tennis",
       "",
-      `👤 Nama Lengkap: ${formData.name}`,
-      `📧 Email: ${formData.email}`,
-      `📞 Nomor Handphone: ${formData.phone || "Tidak tercantum"}`,
-      `🏓 Program: ${formData.program || "Belum dipilih"}`,
-      `💬 Pesan: ${formData.message || "Tidak ada pesan"}`,
+      `Nama Lengkap: ${formData.name}`,
+      `Email: ${formData.email}`,
+      `Nomor Handphone: ${formData.phone || "Tidak tercantum"}`,
+      `Program: ${formData.program || "Belum dipilih"}`,
+      `Pesan: ${formData.message || "Tidak ada pesan"}`,
     ].join("\n"),
   );
 
@@ -35,6 +35,11 @@ const buildWhatsAppMessage = (formData) =>
 // without touching any component code.
 const contactDetails = [
   { icon: "📍", label: "Lokasi", val: "Jakarta & Kudus" },
+  // {
+  //   icon: "📞",
+  //   label: "Nomor Telepon",
+  //   val: import.meta.env.VITE_CONTACT_PHONE
+  // }
 ];
 
 function WhatsAppIcon() {
@@ -179,7 +184,7 @@ export default function Contact() {
                 <option value="">Pilih program...</option>
                 <option>Private Class</option>
                 <option>Group Session</option>
-                <option>Kids Class</option>
+                <option>Kids' Class</option>
                 <option>Private Event</option>
                 <option>Brand Collaboration</option>
               </select>

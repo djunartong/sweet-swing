@@ -8,25 +8,25 @@ const programs = [
   {
     icon: "🎾",
     level: "Private",
-    name: "Private Sessions",
+    name: "Private Session",
     desc: "Fokus penuh buat kamu. Sesi one-on-one bersama coach berarti setiap menit dipakai untuk apa yang benar-benar kamu butuhkan — entah itu untuk mempoles serve-mu, atau sekadar makin nyaman di lapangan.",
   },
   {
     icon: "⭐",
     level: "Kids",
-    name: "Kids' Classes",
+    name: "Kids' Class",
     desc: "Tempat anak-anak jatuh cinta sama tenis. Sesi yang fun, santai, dan penuh semangat dirancang untuk membangun kepercayaan diri dan koordinasi si kecil. Belum pernah pegang raket? We're here for your little ones!",
   },
   {
     icon: "🎉",
     level: "Events",
-    name: "Private Events",
+    name: "Private Event",
     desc: "Mau bikin acara yang beda dari biasanya? Kami hadirkan pengalaman tenis ke momen spesial kamu. Acara ulang tahun, team bonding, pre-wedding, atau family day — kamu tentuin konsepnya, kami yang urus sisanya.",
   },
   {
     icon: "🤝",
     level: "Collab",
-    name: "Brand Collaborations",
+    name: "Brand Collaboration",
     desc: "Ada ide keren? Yuk collab! Kami terbuka untuk bekerjasama dengan brand yang memiliki visi yang sama: olahraga, komunitas, dan good vibes.",
   },
 ];
@@ -35,7 +35,7 @@ export default function Programs() {
   return (
     <section className="programs" id="programs">
       <div className="section-label">Program Kami</div>
-      <h2 className="section-title">Something for Everyone</h2>
+      <h2 className="section-title">Tersedia Untuk Semua</h2>
       <p className="section-sub">
         Dari kelas private dan sesi grup, lalu kids classes dan brand collabs,
         akan ada tempat untuk kamu di Sweet Swing. <br />

@@ -1,17 +1,20 @@
 import { useState, useRef } from "react";
 import { FaInstagram } from "react-icons/fa";
 
+const SWIPE_THRESHOLD = 80;
+
 const coaches = [
   {
     id: 1,
     personalInfo: {
+      title: "Founder",
       name: "Hanna Levina",
       image: import.meta.env.BASE_URL + "/images/about/hanna.jpg",
       description:
-        "Former junior national champion with 15+ years of experience in the game. She is motivated to help players at every level discover their spark and grow on the court",
+        "Mantan juara nasional junior dengan lebih dari 15 tahun pengalaman dalam dunia tenis. Sekarang hadir untuk membantu kamu menemukan semangat bermain, di level manapun kamu berada 😊 ",
       credentials: [
-        "Indonesian National Champion (U10-U18)",
-        "Former WTA & ITF-ranked player",
+        "Juara Nasional Indonesia (U10-U18)",
+        "Mantan atlet dengan peringkat WTA & ITF",
       ],
       instagram: "hannlevv",
     },
@@ -20,7 +23,7 @@ const coaches = [
     id: 2,
     personalInfo: {
       name: "Placeholder 1",
-      image: import.meta.env.BASE_URL + "/images/about/coach2.jpg",
+
       description: "Lorem ipsum dolor sit amet...",
       credentials: ["Lorem ipsum", "Dolor sit amet", "Consectetur elit"],
     },
@@ -29,7 +32,7 @@ const coaches = [
     id: 3,
     personalInfo: {
       name: "Placeholder 2",
-      image: import.meta.env.BASE_URL + "/images/about/coach3.jpg",
+
       description: "Lorem ipsum dolor sit amet...",
       credentials: ["Lorem ipsum", "Dolor sit amet", "Consectetur elit"],
     },
@@ -38,7 +41,8 @@ const coaches = [
 
 export default function About() {
   const [current, setCurrent] = useState(0);
-  const startX = useRef(null);
+  const startX = useRef(0);
+  const endX = useRef(0);
 
   const goTo = (index) => {
     setCurrent((index + coaches.length) % coaches.length);
@@ -53,14 +57,14 @@ export default function About() {
   };
 
   const handleTouchEnd = (e) => {
-    if (!startX.current) return;
+    endX.current = e.changedTouches[0].clientX; // capture where finger lifted
+    const diff = startX.current - endX.current;
 
-    const diff = e.changedTouches[0].clientX - startX.current;
+    if (Math.abs(diff) < SWIPE_THRESHOLD) return;
 
-    if (diff > 50) prev();
-    if (diff < -50) next();
-
-    startX.current = null;
+    if (diff > 0)
+      next(); // swiped left → next
+    else prev(); // swiped right → prev
   };
 
   return (
@@ -82,16 +86,22 @@ export default function About() {
             >
               {/* IMAGE */}
               <div className="about-img-wrap">
-                <img
-                  className="about-img"
-                  src={coach.personalInfo.image}
-                  alt={coach.personalInfo.name}
-                />
+                {coach.personalInfo.image ? (
+                  <img
+                    className="about-img"
+                    src={coach.personalInfo.image}
+                    alt={coach.personalInfo.name}
+                  />
+                ) : (
+                  <div className="about-img-placeholder">🎾</div>
+                )}
               </div>
 
               {/* CONTENT */}
               <div className="about-content">
-                <div className="section-label">Meet Your Coach</div>
+                <div className="section-label">
+                  Meet Your {coach.personalInfo.title || "Coach"}
+                </div>
                 <h2 className="section-title">{coach.personalInfo.name}</h2>
 
                 <p className="section-sub">{coach.personalInfo.description}</p>
@@ -113,7 +123,7 @@ export default function About() {
                     rel="noopener noreferrer"
                   >
                     <FaInstagram />
-                    Connect on Instagram
+                    Profil Instagram
                   </a>
                 )}
               </div>

@@ -15,17 +15,17 @@ const slides = [
   {
     src: import.meta.env.BASE_URL + "/images/hero/group.jpg",
     alt: "Group session",
-    label: "Group Sessions",
+    label: "Group Session",
   },
   {
     src: import.meta.env.BASE_URL + "/images/hero/kids-class.jpg",
     alt: "Kid's class",
-    label: "Kids Classes",
+    label: "Kids' Class",
   },
   {
     src: import.meta.env.BASE_URL + "/images/hero/private-event.jpeg",
     alt: "Private event and collaborations",
-    label: "Private Events and Collaborations",
+    label: "Private Event and Collaborations",
   },
 ];
 
@@ -101,7 +101,7 @@ export default function Hero() {
       {/* Two-column layout: text left, carousel right */}
       <div className="hero-inner">
         <div className="hero-content">
-          <div className="hero-badge">🎾 Tennis for Everyone</div>
+          <div className="hero-badge">🎾 Tenis Untuk Semua</div>
           <h1>
             <span className="accent">Play</span> More
             <br />
@@ -109,8 +109,7 @@ export default function Hero() {
           </h1>
           <p>
             Mau mencoba tenis untuk pertama kalinya, atau udah main dan pengen
-            makin jago? Come swing with us! <br /> Good vibes, great coaching —
-            all skill levels welcome 😊
+            makin jago? <i>Come swing with us!</i>
           </p>
           <div className="hero-btns">
             <button
@@ -137,15 +136,15 @@ export default function Hero() {
           <div className="hero-stats">
             <div>
               <div className="stat-num">15+</div>
-              <div className="stat-label">Years Experience</div>
+              <div className="stat-label">Tahun Pengalaman</div>
             </div>
             <div>
               <div className="stat-num">100+</div>
-              <div className="stat-label">Students Trained</div>
+              <div className="stat-label">Murid Terlatih</div>
             </div>
             <div>
               <div className="stat-num">98%</div>
-              <div className="stat-label">Satisfaction Rate</div>
+              <div className="stat-label">Tingkat Kepuasan</div>
             </div>
           </div>
         </div>

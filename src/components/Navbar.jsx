@@ -11,8 +11,15 @@ export default function Navbar() {
 
   return (
     <nav className="navbar">
-      <div className="nav-logo">
-        Sweet<span>Swing</span>
+      <div className="nav-left" onClick={() => scrollTo("home")}>
+        <img
+          src={import.meta.env.BASE_URL + "/images/navbar/sst-logo.png"}
+          alt="Sweet Swing Tennis"
+          className="nav-logo"
+        />
+        <div className="nav-text">
+          Sweet<span>Swing</span>
+        </div>
       </div>
 
       {/* Hamburger button — only visible on mobile via CSS */}
