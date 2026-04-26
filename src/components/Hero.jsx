@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 
 // ─── CAROUSEL DATA ────────────────────────────────────────────────────────────
 // To replace sample images with your own photos, update the src values here.
@@ -46,8 +46,30 @@ function HeroCarousel() {
     setCurrent((prev) => (prev - 1 + slides.length) % slides.length);
   const next = () => setCurrent((prev) => (prev + 1) % slides.length);
 
+  const SWIPE_THRESHOLD = 80;
+  const startX = useRef(0);
+  const endX = useRef(0);
+
+  const handleTouchStart = (e) => {
+    startX.current = e.touches[0].clientX;
+  };
+
+  const handleTouchEnd = (e) => {
+    endX.current = e.changedTouches[0].clientX;
+    const diff = startX.current - endX.current;
+
+    if (Math.abs(diff) < SWIPE_THRESHOLD) return;
+
+    if (diff > 0) next();
+    else prev();
+  };
+
   return (
-    <div className="carousel">
+    <div
+      className="carousel"
+      onTouchStart={handleTouchStart}
+      onTouchEnd={handleTouchEnd}
+    >
       <div className="carousel-track">
         {slides.map((slide, index) => (
           <div
