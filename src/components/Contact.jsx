@@ -24,8 +24,6 @@ const buildWhatsAppMessage = (formData) =>
       "Permintaan Informasi — Sweet Swing Tennis",
       "",
       `Nama Lengkap: ${formData.name}`,
-      `Email: ${formData.email}`,
-      `Nomor Handphone: ${formData.phone || "Tidak tercantum"}`,
       `Program: ${formData.program || "Belum dipilih"}`,
       `Pesan: ${formData.message || "Tidak ada pesan"}`,
     ].join("\n"),
@@ -34,7 +32,7 @@ const buildWhatsAppMessage = (formData) =>
 // Contact detail values also come from .env so you can update them in one place
 // without touching any component code.
 const contactDetails = [
-  { icon: "📍", label: "Lokasi", val: "Jakarta & Kudus" },
+  { icon: "📍", label: "Lokasi", val: "Jakarta, Kudus & Semarang" },
   // {
   //   icon: "📞",
   //   label: "Nomor Telepon",
@@ -89,8 +87,8 @@ export default function Contact() {
   // window.open launches it in a new tab so the user stays on the page.
   // We validate name and email before opening.
   const handleSubmit = () => {
-    if (!formData.name || !formData.email) {
-      alert("Please fill in your name and email before sending.");
+    if (!formData.name) {
+      alert("Mohon isi nama lengkap anda");
       return;
     }
 
@@ -109,7 +107,7 @@ export default function Contact() {
       <div className="section-label">Hubungi Kami</div>
       <h2 className="section-title">Come Swing With Us </h2>
       <p className="section-sub">
-        Silahkan tinggalkan pesan atau pertanyaan anda. Kami akan merespon dalam
+        Silahkan tinggalkan pesan atau pertanyaan kamu. Kami akan merespon dalam
         24 jam 😊
       </p>
 
@@ -155,25 +153,6 @@ export default function Contact() {
               />
             </div>
             <div className="form-group">
-              <label>Alamat Email</label>
-              <input
-                type="email"
-                value={formData.email}
-                onChange={(e) =>
-                  setFormData({ ...formData, email: e.target.value })
-                }
-              />
-            </div>
-            <div className="form-group">
-              <label>Nomor Whatsapp</label>
-              <input
-                value={formData.phone}
-                onChange={(e) =>
-                  setFormData({ ...formData, phone: e.target.value })
-                }
-              />
-            </div>
-            <div className="form-group">
               <label>Tertarik Dengan</label>
               <select
                 value={formData.program}
@@ -192,7 +171,7 @@ export default function Contact() {
             <div className="form-group">
               <label>Pesan</label>
               <textarea
-                placeholder="Ceritakan tentang pengalaman dan tujuan anda..."
+                placeholder="Ceritakan tentang pengalaman dan tujuan kamu..."
                 value={formData.message}
                 onChange={(e) =>
                   setFormData({ ...formData, message: e.target.value })

@@ -260,7 +260,7 @@ a {
 .carousel {
   /* fixed width so the carousel doesn't shrink as hero-content grows */
   flex-shrink: 0;
-  width: 450px;
+  width: 470px;
   aspect-ratio: 4/5;
   position: relative;
   border-radius: 20px;

@@ -10,22 +10,22 @@ const slides = [
   {
     src: import.meta.env.BASE_URL + "/images/hero/single.JPG",
     alt: "One-on-one coaching",
-    label: "1-on-1 Coaching",
   },
   {
     src: import.meta.env.BASE_URL + "/images/hero/group.jpg",
     alt: "Group session",
-    label: "Group Session",
   },
   {
     src: import.meta.env.BASE_URL + "/images/hero/kids-class.jpg",
-    alt: "Kid's class",
-    label: "Kids' Class",
+    alt: "Kids' class",
   },
   {
     src: import.meta.env.BASE_URL + "/images/hero/private-event.jpeg",
     alt: "Private event and collaborations",
-    label: "Private Event and Collaborations",
+  },
+  {
+    src: import.meta.env.BASE_URL + "/images/hero/family-class.png",
+    alt: "Family class",
   },
 ];
 
@@ -77,7 +77,6 @@ function HeroCarousel() {
             className={`carousel-slide ${index === current ? "active" : ""}`}
           >
             <img src={slide.src} alt={slide.alt} className="carousel-img" />
-            <div className="carousel-caption">{slide.label}</div>
           </div>
         ))}
       </div>
@@ -123,7 +122,7 @@ export default function Hero() {
       {/* Two-column layout: text left, carousel right */}
       <div className="hero-inner">
         <div className="hero-content">
-          <div className="hero-badge">🎾 Tenis Untuk Semua</div>
+          <div className="hero-badge">🎾 Jakarta, Kudus & Semarang</div>
           <h1>
             <span className="accent">Play</span> More
             <br />
