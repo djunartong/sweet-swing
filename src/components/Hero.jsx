@@ -122,7 +122,7 @@ export default function Hero() {
       {/* Two-column layout: text left, carousel right */}
       <div className="hero-inner">
         <div className="hero-content">
-          <div className="hero-badge">🎾 Jakarta, Kudus & Semarang</div>
+          <div className="hero-badge">🎾 Kudus & Semarang</div>
           <h1>
             <span className="accent">Play</span> More
             <br />

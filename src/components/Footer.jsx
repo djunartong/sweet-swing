@@ -6,8 +6,11 @@ const socials = [
     link: "https://www.instagram.com/sweetswingtennis/",
     label: "Instagram",
   },
-  { icon: FaTiktok, link: "https://tiktok.com", label: "TikTok" },
-  { icon: FaYoutube, link: "https://youtube.com", label: "YouTube" },
+  {
+    icon: FaTiktok,
+    link: "https://tiktok.com/@sweetswingtennis",
+    label: "TikTok",
+  },
 ];
 
 const CURRENT_YEAR = new Date().getFullYear();

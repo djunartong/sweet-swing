@@ -32,7 +32,7 @@ const buildWhatsAppMessage = (formData) =>
 // Contact detail values also come from .env so you can update them in one place
 // without touching any component code.
 const contactDetails = [
-  { icon: "📍", label: "Lokasi", val: "Jakarta, Kudus & Semarang" },
+  { icon: "📍", label: "Lokasi", val: "Kudus & Semarang" },
   // {
   //   icon: "📞",
   //   label: "Nomor Telepon",

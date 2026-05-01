@@ -781,6 +781,56 @@ section {
   color: var(--grey);
 }
 
+/* ─── INSTAGRAM FEED ────────────────────────────────────────────────────── */
+
+.instagram-feed {
+  background: var(--cream);
+  padding: 90px 5%;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.instagram-feed .section-label {
+  color: var(--dark-green);
+}
+
+.instagram-feed .section-title {
+  color: var(--dark-green);
+  /* Instagram handle looks good in a slightly smaller size */
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+}
+
+.instagram-feed .section-sub {
+  margin: 0 0 2.5rem;
+}
+
+/* Follow button — outlined style to not compete with main CTAs */
+.instagram-cta {
+  margin-top: 2.5rem;
+  align-self: center;
+}
+
+.btn-outline-green {
+  display: inline-block;
+  border: 2px solid var(--dark-green);
+  color: var(--dark-green);
+  padding: 0.75rem 1.8rem;
+  border-radius: 4px;
+  font-family: "Nunito", sans-serif;
+  font-weight: 700;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+.btn-outline-green:hover {
+  background: var(--dark-green);
+  color: var(--yellow-green);
+  transform: translateY(-2px);
+}
+
 /* ─── CONTACT ────────────────────────────────────────────────────────────────
    Dark-green section creates strong contrast at the bottom of the page.
    Yellow-green is used for labels and focus states — brand-consistent.
