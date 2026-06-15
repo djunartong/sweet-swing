@@ -1,15 +1,15 @@
 const programs = [
   {
-    icon: "👯",
-    level: "Group",
-    name: "Group Coaching",
-    desc: "Rally, laugh, improve, repeat. Sesi grup kami merupakan perpaduan sempurna antara drill, match play, dan positive vibes. Pemula atau yang mau naik level, semua ada tempatnya di sini.",
+    icon: "🌱",
+    level: "General",
+    name: "Kelas Umum",
+    desc: "Belajar bareng dalam kurikulum yang udah dirancang rapi, step by step. Cocok buat siapa aja yang mau mulai dari basic, sekalian dapet teman baru juga! Open for everyone, kapan aja kamu siap.",
   },
   {
     icon: "🎾",
     level: "Private",
-    name: "Private Session",
-    desc: "Fokus penuh buat kamu. Sesi one-on-one bersama coach berarti setiap menit dipakai untuk apa yang benar-benar kamu butuhkan — entah itu untuk mempoles serve-mu, atau sekadar makin nyaman di lapangan.",
+    name: "Private & Private Group Session",
+    desc: "Fokus penuh buat kamu. Sesi one-on-one atau grup bersama coach berarti setiap menit dipakai untuk apa yang benar-benar kamu dan teman-teman kamu butuhkan — entah itu untuk mempoles serve, atau sekadar makin nyaman di lapangan.",
   },
   {
     icon: "⭐",
@@ -18,10 +18,10 @@ const programs = [
     desc: "Tempat anak-anak jatuh cinta sama tenis. Sesi yang fun, santai, dan penuh semangat dirancang untuk membangun kepercayaan diri dan koordinasi si kecil. Belum pernah pegang raket? We're here for your little ones!",
   },
   {
-    icon: "🎉",
-    level: "Events",
-    name: "Private Event",
-    desc: "Mau bikin acara yang beda dari biasanya? Kami hadirkan pengalaman tenis ke momen spesial kamu. Acara ulang tahun, team bonding, pre-wedding, atau family day — kamu tentuin konsepnya, kami yang urus sisanya.",
+    icon: "👯",
+    level: "Open",
+    name: "Open Class",
+    desc: "Sesi spesial yang terbuka untuk umum, dengan format yang beda setiap bulannya. Bisa jadi workshop teknik tertentu, atau sesi fun match buat yang pengen coba-coba. Pantengin terus update-nya, karena ini bakal jadi salah satu favorit kamu!",
   },
   {
     icon: "🤝",
