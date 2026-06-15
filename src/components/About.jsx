@@ -22,19 +22,17 @@ const coaches = [
   {
     id: 2,
     personalInfo: {
-      name: "Placeholder 1",
-
-      description: "Lorem ipsum dolor sit amet...",
-      credentials: ["Lorem ipsum", "Dolor sit amet", "Consectetur elit"],
-    },
-  },
-  {
-    id: 3,
-    personalInfo: {
-      name: "Placeholder 2",
-
-      description: "Lorem ipsum dolor sit amet...",
-      credentials: ["Lorem ipsum", "Dolor sit amet", "Consectetur elit"],
+      title: "Head Coach",
+      name: "Sebastian Hanzel",
+      image: import.meta.env.BASE_URL + "/images/about/hanzel.jpeg",
+      description:
+        "Mantan atlet junior nomor 3 nasional yang siap bantu kamu naik level 💪",
+      credentials: [
+        "Peringkat 3 Nasional (Junior)",
+        "Mantan atlet ITF",
+        "Aktif coaching sejak 2019",
+      ],
+      instagram: "sebastianhanzel22",
     },
   },
 ];

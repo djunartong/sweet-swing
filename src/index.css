@@ -632,7 +632,7 @@ section {
 }
 /* image */
 .about-img {
-  width: 100%;
+  width: 300px;
   aspect-ratio: 4 / 5;
   object-fit: cover;
   border-radius: 16px;
@@ -762,6 +762,8 @@ section {
   width: 42px;
   height: 42px;
   border-radius: 50%;
+  object-fit: cover;
+  object-position: top;
   background: linear-gradient(135deg, var(--dark-green), #6b841f);
   display: flex;
   align-items: center;
