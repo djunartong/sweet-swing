@@ -37,8 +37,7 @@ export default function Programs() {
       <div className="section-label">Program Kami</div>
       <h2 className="section-title">Tersedia Untuk Semua</h2>
       <p className="section-sub">
-        Dari kelas private dan sesi grup, lalu kids classes dan brand collabs,
-        akan ada tempat untuk kamu di Sweet Swing. <br />
+        Akan selalu ada tempat untuk kamu di Sweet Swing 😊 <br />
         Pick what fits your vibe.
       </p>
       <div className="programs-grid">
