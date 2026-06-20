@@ -1,11 +1,5 @@
 import { useState, useEffect, useRef } from "react";
 
-// ─── CAROUSEL DATA ────────────────────────────────────────────────────────────
-// To replace sample images with your own photos, update the src values here.
-// Option A — local file: place the image in docs/images/ and use "/images/photo.jpg"
-// Option B — keep using Unsplash URLs (free, no attribution required for dev)
-// w= and h= control dimensions; fit=crop fills the frame exactly.
-
 const slides = [
   {
     src: import.meta.env.BASE_URL + "images/hero/single.JPG",
