@@ -8,23 +8,23 @@ import { useState, useEffect, useRef } from "react";
 
 const slides = [
   {
-    src: import.meta.env.BASE_URL + "/images/hero/single.JPG",
+    src: import.meta.env.BASE_URL + "images/hero/single.JPG",
     alt: "One-on-one coaching",
   },
   {
-    src: import.meta.env.BASE_URL + "/images/hero/group.jpg",
+    src: import.meta.env.BASE_URL + "images/hero/group.jpg",
     alt: "Group session",
   },
   {
-    src: import.meta.env.BASE_URL + "/images/hero/kids-class.jpg",
+    src: import.meta.env.BASE_URL + "images/hero/kids-class.jpg",
     alt: "Kids' class",
   },
   {
-    src: import.meta.env.BASE_URL + "/images/hero/private-event.jpeg",
+    src: import.meta.env.BASE_URL + "images/hero/private-event.jpeg",
     alt: "Private event and collaborations",
   },
   {
-    src: import.meta.env.BASE_URL + "/images/hero/family-class.png",
+    src: import.meta.env.BASE_URL + "images/hero/family-class.png",
     alt: "Family class",
   },
 ];

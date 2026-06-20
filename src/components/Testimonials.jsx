@@ -1,6 +1,6 @@
 const testimonials = [
   {
-    image: import.meta.env.BASE_URL + "/images/testimonials/martin.jpeg",
+    image: import.meta.env.BASE_URL + "images/testimonials/martin.jpeg",
     initials: "M",
     name: "Martin",
     role: "Kelas Privat",
@@ -8,7 +8,7 @@ const testimonials = [
     text: "SweetSwing beneran jadi bekal buat perjalanan tennis ku sih.. jadi fondasi awal karena di Sweetswing tuh diajarin semuanya mulai dari pemanasan yang benar, footwork yang benar, teknik mukul yang benar, teknik recovery yang benar. Semuanya thanks to coach yang luar biasa detail bgt waktu ngelatih. Dan hebatnya lagi sesi-sesi nya itu bisa di bungkus dengan cara yang menarik dan ga ngebosenin.. Thank you SweetSwing!!",
   },
   {
-    image: import.meta.env.BASE_URL + "/images/testimonials/marsiko.jpeg",
+    image: import.meta.env.BASE_URL + "images/testimonials/marsiko.jpeg",
     initials: "MK",
     name: "Marsiko",
     role: "Kelas Privat",
@@ -16,7 +16,7 @@ const testimonials = [
     text: "Latihannya nggak pernah bosenin, si coach ada aja cara nge-push kita (in a positive and fun way) dan nunjukin dimana kurangnya, supaya kita bisa improve. Bener bener semuanya step by step. Coachnya juga sabar sabar. Bisa diskusi konsultasi juga, gimana caranya biar bisa AIUEO, nanti dikasih PR exercise di rumah, supaya di lapangan lebih prima ",
   },
   {
-    image: import.meta.env.BASE_URL + "/images/testimonials/adhi.jpeg",
+    image: import.meta.env.BASE_URL + "images/testimonials/adhi.jpeg",
     initials: "A",
     name: "Adhi",
     role: "Kelas Semi Privat",

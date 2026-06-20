@@ -9,7 +9,7 @@ const coaches = [
     personalInfo: {
       title: "Founder",
       name: "Hanna Levina",
-      image: import.meta.env.BASE_URL + "/images/about/hanna.jpg",
+      image: import.meta.env.BASE_URL + "images/about/hanna.jpg",
       description:
         "Former junior national champion with more than 15 years of experience in the world of tennis. Now here to help you find your passion for playing, at whatever level you're at 😊",
       credentials: [
@@ -25,7 +25,7 @@ const coaches = [
     personalInfo: {
       title: "Head Coach",
       name: "Sebastian Hanzel",
-      image: import.meta.env.BASE_URL + "/images/about/hanzel.jpeg",
+      image: import.meta.env.BASE_URL + "images/about/hanzel.jpeg",
       description:
         "Former junior athlete ranked 3rd nationally, ready to help you level up 💪",
       credentials: [

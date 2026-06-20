@@ -13,7 +13,7 @@ export default function Navbar() {
     <nav className="navbar">
       <div className="nav-left" onClick={() => scrollTo("home")}>
         <img
-          src={import.meta.env.BASE_URL + "/images/navbar/sst-logo.png"}
+          src={import.meta.env.BASE_URL + "images/navbar/sst-logo.png"}
           alt="Sweet Swing Tennis"
           className="nav-logo"
         />
