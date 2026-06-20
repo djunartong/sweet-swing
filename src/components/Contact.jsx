@@ -31,14 +31,7 @@ const buildWhatsAppMessage = (formData) =>
 
 // Contact detail values also come from .env so you can update them in one place
 // without touching any component code.
-const contactDetails = [
-  { icon: "📍", label: "Lokasi", val: "Kudus & Semarang" },
-  // {
-  //   icon: "📞",
-  //   label: "Nomor Telepon",
-  //   val: import.meta.env.VITE_CONTACT_PHONE
-  // }
-];
+const contactDetails = [{ icon: "📍", label: "Lokasi", val: "Kudus" }];
 
 function WhatsAppIcon() {
   return (
@@ -161,10 +154,9 @@ export default function Contact() {
                 }
               >
                 <option value="">Pilih program...</option>
-                <option>Private Class</option>
-                <option>Group Session</option>
+                <option>Open Class</option>
+                <option>Private & Private Group Session</option>
                 <option>Kids' Class</option>
-                <option>Private Event</option>
                 <option>Brand Collaboration</option>
               </select>
             </div>

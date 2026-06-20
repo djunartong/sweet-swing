@@ -11,10 +11,11 @@ const coaches = [
       name: "Hanna Levina",
       image: import.meta.env.BASE_URL + "/images/about/hanna.jpg",
       description:
-        "Mantan juara nasional junior dengan lebih dari 15 tahun pengalaman dalam dunia tenis. Sekarang hadir untuk membantu kamu menemukan semangat bermain, di level manapun kamu berada 😊 ",
+        "Former junior national champion with more than 15 years of experience in the world of tennis. Now here to help you find your passion for playing, at whatever level you're at 😊",
       credentials: [
-        "Juara Nasional Indonesia (U10-U18)",
-        "Mantan atlet dengan peringkat WTA & ITF",
+        "Indonesian National Champion (U10–18)",
+        "Former WTA & ITF athlete",
+        "Passionate coach and educator",
       ],
       instagram: "hannlevv",
     },
@@ -26,11 +27,11 @@ const coaches = [
       name: "Sebastian Hanzel",
       image: import.meta.env.BASE_URL + "/images/about/hanzel.jpeg",
       description:
-        "Mantan atlet junior nomor 3 nasional yang siap bantu kamu naik level 💪",
+        "Former junior athlete ranked 3rd nationally, ready to help you level up 💪",
       credentials: [
-        "Peringkat 3 Nasional (Junior)",
-        "Mantan atlet ITF",
-        "Aktif coaching sejak 2019",
+        "Former ITF athlete",
+        "Coaching since 2019",
+        "Expert in kids' classes, technique correction and match play strategy",
       ],
       instagram: "sebastianhanzel22",
     },
@@ -121,7 +122,7 @@ export default function About() {
                     rel="noopener noreferrer"
                   >
                     <FaInstagram />
-                    Profil Instagram
+                    Instagram Profile
                   </a>
                 )}
               </div>

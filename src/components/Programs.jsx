@@ -2,7 +2,7 @@ const programs = [
   {
     icon: "🌱",
     level: "General",
-    name: "Kelas Umum",
+    name: "Open Class",
     desc: "Belajar bareng dalam kurikulum yang udah dirancang rapi, step by step. Cocok buat siapa aja yang mau mulai dari basic, sekalian dapet teman baru juga! Open for everyone, kapan aja kamu siap.",
   },
   {
@@ -16,12 +16,6 @@ const programs = [
     level: "Kids",
     name: "Kids' Class",
     desc: "Tempat anak-anak jatuh cinta sama tenis. Sesi yang fun, santai, dan penuh semangat dirancang untuk membangun kepercayaan diri dan koordinasi si kecil. Belum pernah pegang raket? We're here for your little ones!",
-  },
-  {
-    icon: "👯",
-    level: "Open",
-    name: "Open Class",
-    desc: "Sesi spesial yang terbuka untuk umum, dengan format yang beda setiap bulannya. Bisa jadi workshop teknik tertentu, atau sesi fun match buat yang pengen coba-coba. Pantengin terus update-nya, karena ini bakal jadi salah satu favorit kamu!",
   },
   {
     icon: "🤝",
